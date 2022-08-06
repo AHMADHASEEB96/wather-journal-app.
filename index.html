@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather Journal</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="holder headline">Weather Journal App</div>
+      <div class="card">
+        <div class="n" style="font-size: 10px">
+          By <span style="color: orange">Ahmad Haseeb</span> for UDACITY project
+        </div>
+
+        <div class="holder zip">
+          <label for="zip">Zipcode </label>
+          <input
+            type="number"
+            id="zip"
+            placeholder="insert Zipcode"
+            autofocus
+          />
+        </div>
+        <div class="holder feel">
+          <label for="feelings">Share your feelings </label>
+          <textarea
+            class="myInput"
+            id="feelings"
+            placeholder="how do you feel under this weather"
+            row="3"
+            cols="30"
+          ></textarea>
+          <button id="generate" type="submit">Generate</button>
+        </div>
+        <div class="holder entry">
+          <div class="title">Most Recent Entry</div>
+          <div id="entryHolder">
+            <div id="date"></div>
+            <div id="temp"></div>
+            <div id="content"></div>
+          </div>
+        </div>
+        <div id="error"></div>
+      </div>
+    </div>
+    <br />
+    <button id="open">Zip Codes Range For US</button>
+    <section id="zipRange">
+      <button id="close">Close window</button>
+      <h3>Current Postal Code Range in the United States</h3>
+      <br />
+      The current postal codes in the United States range from
+      <span id="range"> 00001 – 99950. </span> The lowest and highest of these
+      postal codes are both specific to areas in Alaska; The 00001 code is for
+      the N Dillingham area, and the postal code 99950 is for Ketchikan, AK.
+    </section>
+
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>
